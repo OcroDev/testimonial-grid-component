@@ -1,0 +1,119 @@
+
+figure {
+  margin: 0px;
+}
+
+.grid__wrapper{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-template-areas: 
+  'one one two five'
+  'three four four five';
+  grid-gap: 2.5rem;
+  justify-self: center;
+  color: var(--White);
+}
+
+.grid__item__one, .grid__item__two, .grid__item__three, .grid__item__four, .grid__item__five{
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 30px 21px 46px -31px rgba(0, 0, 0, 0.40);
+    -webkit-box-shadow: 30px 21px 46px -31px rgba(0, 0, 0, 0.40);
+    -moz-box-shadow: 30px 21px 46px -31px rgba(0, 0, 0, 0.40);
+}
+
+.grid__item__one{
+  grid-area: one;
+  background-color: var(--Moderate-violet);
+}
+
+.grid__item__two{
+  grid-area: two;
+  background-color: var(--Very-dark-grayish-blue);
+}
+
+.grid__item__three{
+  grid-area: three;
+  background-color: var(--White);
+  color: var(--Very-dark-blackish-blue);
+}
+
+.grid__item__four{
+  grid-area: four;
+  background-color: var(--Very-dark-blackish-blue);
+}
+
+.grid__item__five{
+  grid-area: five;
+  background-color: var(--White);
+  color: var(--Very-dark-blackish-blue);
+}
+
+.grid__item__header{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  position:relative;
+}
+
+.grid__item__header__name{
+  margin: 0;
+  font-weight: 500;
+}
+
+.grid__item__header__verified{
+  opacity: 0.5;
+}
+
+.grid__item__header_img{
+  border-radius: 50%;
+}
+
+.grid__item__header_img__status{
+  border: 2px solid hsl(264, 86%, 72%);
+}
+
+.grid__item__header__quote{
+  position: absolute;
+  top: -2.2rem;
+  right: 9rem;
+  width: auto;
+  height: auto;
+  z-index: 1;
+}
+
+.grid__item__title{
+  font-weight: 600;
+  font-size: 2em;
+  word-wrap: break-word;
+  width: 100%;
+}
+
+.grid__item__text{
+  opacity: 70%;
+  word-wrap: break-word;
+  width: 95%;
+  font-size: 1.26em;
+}
+
+
+@media screen and  (max-width: 375px){
+  .grid__wrapper {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four'
+        'five';
+      grid-gap: 2.5rem;
+      justify-self: center;
+      color: var(--White);
+    }
+  
+}
